@@ -1,6 +1,7 @@
 {
     "RankingRewards": {
         "desc": "排名奖励入口",
+        "max_hit": 1,
         "next": [
             "RankingRewardsStart",
             "EndTask"

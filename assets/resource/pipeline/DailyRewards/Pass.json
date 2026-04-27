@@ -1,6 +1,7 @@
 {
     "Pass": {
         "desc": "Pass入口",
+        "max_hit": 1,
         "next": [
             "PassStart",
             "EndTask"

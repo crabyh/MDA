@@ -1,6 +1,7 @@
 {
     "Mission": {
         "desc": "任务收取入口",
+        "max_hit": 1,
         "next": [
             "MissionStart",
             "EndTask"

@@ -1,6 +1,7 @@
 {
     "Email": {
         "desc": "邮箱入口",
+        "max_hit": 1,
         "next": [
             "EmailStart",
             "EndTask"
