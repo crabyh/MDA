@@ -80,7 +80,7 @@
         },
         "next": [
             "[JumpBack]RemoveFavorites",
-            "[JumpBack]Confirm",
+            "[JumpBack]AdviseConfirm",
             "[JumpBack]RankIncreaseConfirm",
             "[JumpBack]EpisodeReward",
             "NextAdvise"
@@ -163,12 +163,33 @@
             "type": "Click"
         },
         "next": [
-            "[JumpBack]Confirm",
+            "[JumpBack]AdviseConfirm",
             "[JumpBack]AdviseStory",
             "[JumpBack]RankIncreaseConfirm",
             "[JumpBack]EpisodeReward",
             "NextAdvise"
         ]
+    },
+    "AdviseConfirm": {
+        "desc": "确认咨询",
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    617,
+                    390,
+                    122,
+                    121
+                ],
+                "template": [
+                    "ConfirmWithCircle.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000
     },
     "NextAdvise": {
         "desc": "下一个咨询",
