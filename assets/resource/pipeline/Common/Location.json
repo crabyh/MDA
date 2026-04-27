@@ -137,14 +137,14 @@
         ]
     },
     "SkipPlot": {
-        "desc": "跳过剧情",
+        "desc": "跳过",
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
                     1218,
                     9,
-                    40,
+                    50,
                     16
                 ],
                 "expected": [
