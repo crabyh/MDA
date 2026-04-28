@@ -3,6 +3,7 @@
         "format": "node scripts/clean-empty-pipeline-fields.mjs && prettier --write ."
     },
     "devDependencies": {
+        "@biomejs/biome": "2.4.13",
         "@nekosu/maa-tools": "1.0.23",
         "@nekosu/prettier-plugin-maafw-sort": "1.0.4",
         "prettier": "3.5.3",

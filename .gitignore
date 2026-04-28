@@ -11,6 +11,7 @@ build-*
 *.lo
 *.o
 *.obj
+.gocache
 
 # Precompiled Headers
 *.gch
@@ -36,6 +37,7 @@ build-*
 *.exe
 *.out
 *.app
+__debug_bin*
 
 Debug
 Release
@@ -416,12 +418,18 @@ FodyWeavers.xsd
 .vscode/*
 !.vscode/settings.json
 # !.vscode/tasks.json
-# !.vscode/launch.json
+!.vscode/launch.json
 !.vscode/extensions.json
+!.vscode/mse_config.json
+!.vscode/maa_checker.json
 *.code-workspace
 
 # Local History for Visual Studio Code
 .history/
+
+# Claude Code
+.claude/*
+!.claude/skills/
 
 # Windows Installer files from build outputs
 *.cab
@@ -439,36 +447,18 @@ enc_temp_folder/*
 # Nuke
 .nuke/temp/*
 
-# Build
-install/
-maafw/*
-mxu*
-deps/*
-!deps/tools/
-deps/tools/*
-!deps/tools/*.schema.json
-build
-
 # MaaDebugger
 .nicegui/*
 .maa
 
-# Tools
-tools/ImageCropper/**/*.png
+# Build
+install/
+maafw/*
+mxu*
+deps
 
 config
 debug
-
-# Go
-agent/go-service/vendor/
-agent/go-service/debug/
-.gocache
-__debug_bin*
-
-# Python
-venv/
-.venv/
-.cache/
 
 # macOS
 .DS_Store
@@ -485,6 +475,12 @@ venv/
 Network Trash Folder
 Temporary Items
 
-# opencode
-.opencode/*
-!.opencode/skills/
+# python
+venv/
+.cache/
+
+# maa-tools
+tests/maatools
+
+# oh-my-opencode
+.sisyphus/
