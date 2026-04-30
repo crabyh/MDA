@@ -50,7 +50,7 @@
             "NavigationEnterHall"
         ]
     },
-    "DailyRewardsRankingRewardRedDotVisible": {
+    "DailyRewardsClickRankingRewardRedDot": {
         "desc": "方舟内部排名奖励的红点",
         "recognition": {
             "type": "TemplateMatch",
@@ -63,17 +63,6 @@
                 ],
                 "template": [
                     "Common/RedDot.png"
-                ]
-            }
-        }
-    },
-    "DailyRewardsClickRankingRewardRedDot": {
-        "desc": "方舟内部排名奖励的红点",
-        "recognition": {
-            "type": "And",
-            "param": {
-                "all_of": [
-                    "DailyRewardsRankingRewardRedDotVisible"
                 ]
             }
         },

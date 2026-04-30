@@ -40,7 +40,7 @@
             "BaseEndTask"
         ]
     },
-    "DailyRewardsMissionRedDotVisible": {
+    "DailyRewardsClickMissionRedDot": {
         "desc": "任务的红点",
         "recognition": {
             "type": "TemplateMatch",
@@ -53,17 +53,6 @@
                 ],
                 "template": [
                     "Common/RedDot.png"
-                ]
-            }
-        }
-    },
-    "DailyRewardsClickMissionRedDot": {
-        "desc": "任务的红点",
-        "recognition": {
-            "type": "And",
-            "param": {
-                "all_of": [
-                    "DailyRewardsMissionRedDotVisible"
                 ]
             }
         },
