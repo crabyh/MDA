@@ -53,7 +53,8 @@
             "type": "Click"
         },
         "next": [
-            "OutpostEnterDailyEvent"
+            "OutpostEnterDailyEvent",
+            "OutpostDailyLives"
         ]
     },
     "OutpostEnterDailyEvent": {
