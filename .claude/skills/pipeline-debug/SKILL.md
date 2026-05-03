@@ -64,21 +64,21 @@ allowed-tools: Read Grep Glob
 
 1. **解析名称结构**：`<Domain><ActionOrObject><Role>`
 2. **通过后缀识别类型**：
-   - `Main` → 入口节点，组织后续节点
-   - `Flow` → 编排节点，无直接识别/动作
-   - `Enter<Page>` → 导航节点，点击进入某页面
-   - `On<Page>Page` / `Visible` → 状态检测节点
-   - `Click<Object>` / `Select<Object>` / `Claim<Object>` → 动作节点
-   - `Confirm<Object>` → 确认弹窗处理
-   - `Scroll<Direction>` / `Swipe<Object>` → 滚动动作
-   - `End` / `EndTask` → 终止节点
-   - `Entered` → 成功哨兵，确认导航完成
+    - `Main` → 入口节点，组织后续节点
+    - `Flow` → 编排节点，无直接识别/动作
+    - `Enter<Page>` → 导航节点，点击进入某页面
+    - `On<Page>Page` / `Visible` → 状态检测节点
+    - `Click<Object>` / `Select<Object>` / `Claim<Object>` → 动作节点
+    - `Confirm<Object>` → 确认弹窗处理
+    - `Scroll<Direction>` / `Swipe<Object>` → 滚动动作
+    - `End` / `EndTask` → 终止节点
+    - `Entered` → 成功哨兵，确认导航完成
 3. **验证域一致性**：同一模块应使用相同域前缀
 4. **检测命名与代码的不匹配**：
-   - `Click<Object>` 但无 `action` → 可能有误
-   - `Visible` 但有 `action: Click` → 应为 `Click<Object>`
-   - `Flow` 但有识别参数 → 应为纯编排节点
-   - `Enter<Page>` 但无 `next` 重试 → 缺少成功哨兵
+    - `Click<Object>` 但无 `action` → 可能有误
+    - `Visible` 但有 `action: Click` → 应为 `Click<Object>`
+    - `Flow` 但有识别参数 → 应为纯编排节点
+    - `Enter<Page>` 但无 `next` 重试 → 缺少成功哨兵
 
 ### 第五步：分析节点关系
 
