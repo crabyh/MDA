@@ -95,7 +95,7 @@ EventMain
 
 ### 流程节点
 
-只负责组织后继节点、不直接识别或点击的节点，使用：
+只负责组织后继节点、不直接点击的节点，使用：
 
 ```text
 <Domain><Subtask>Flow
@@ -324,8 +324,8 @@ FlagInMission
 <Domain><Object>Claimed
 <Domain><Object>Selected
 <Domain><Object>Completed
-<Domain><Object>Exhausted
 <Domain><Object>Detected
+<Domain><Object>Blocked
 ```
 
 示例：
@@ -348,8 +348,8 @@ BattleScreenFreezeDetected
 | `Claimed`   | 奖励或任务已领取                                                                                         |
 | `Selected`  | 选项已选中                                                                                               |
 | `Completed` | 流程、任务、收集、阶段已完成                                                                             |
-| `Exhausted` | 次数、资源、机会已耗尽                                                                                   |
 | `Detected`  | 非 UI 的异常、状态、算法信号被检测到；仅在 `Visible` / `Available` / `Selected` 等业务后缀都不准确时使用 |
+| `Blocked`   | 检测到特定内容后阻断当前流程，用于中断异常状态、跳过不可用功能或拦截不需要继续执行的分支                 |
 
 ### 点击/选择节点
 
