@@ -27,7 +27,8 @@
         "post_wait_freezes": 1000,
         "next": [
             "InterceptionBattleFlow",
-            "ArkEnterInterception"
+            "ArkEnterInterception",
+            "[JumpBack]CommonClickBlank"
         ]
     },
     "InterceptionMainPageEntered": {
@@ -48,7 +49,7 @@
         }
     },
     "InterceptionBattleFlow": {
-        "desc": "拦截战流程",
+        "desc": "已进入拦截战，执行拦截战流程",
         "recognition": {
             "type": "And",
             "param": {

@@ -8,7 +8,7 @@
         ]
     },
     "MissionStart": {
-        "desc": "任务入口",
+        "desc": "进入任务页面",
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -68,13 +68,13 @@
             }
         },
         "next": [
-            "DailyRewardsMissionClaimedFlow",
             "[JumpBack]MissionClaimAll",
             "[JumpBack]CommonConfirmReward",
-            "DailyRewardsClickMissionRedDot"
+            "DailyRewardsClickMissionRedDot",
+            "CommonClosePage"
         ]
     },
-    "DailyRewardsMissionClaimed": {
+    "DailyRewardsMissionClaimedVisible": {
         "desc": "已领取",
         "recognition": {
             "type": "ColorMatch",
@@ -98,13 +98,6 @@
                 "count": 200
             }
         }
-    },
-    "DailyRewardsMissionClaimedFlow": {
-        "desc": "任务已领取流程",
-        "next": [
-            "DailyRewardsMissionClaimed",
-            "CommonClosePage"
-        ]
     },
     "MissionClaimAll": {
         "desc": "任务奖励领取",

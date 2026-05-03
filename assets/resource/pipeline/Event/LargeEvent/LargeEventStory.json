@@ -22,8 +22,7 @@
             "type": "Click"
         },
         "next": [
-            "LargeEventStoryEventPage",
-            "[JumpBack]CommonClickBlank"
+            "LargeEventStoryEventPage"
         ]
     },
     "LargeEventStoryEventPage": {
@@ -56,7 +55,7 @@
         },
         "next": [
             "LargeEventClickStoryEventPageRedDot",
-            "CommonGoBack"
+            "[JumpBack]CommonClickBlank"
         ]
     },
     "LargeEventClickStoryEventPageRedDot": {
@@ -126,16 +125,16 @@
     "LargeEventEventStageBattle": {
         "desc": "大活动活动关卡页面战斗",
         "recognition": {
-            "type": "OCR",
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    438,
-                    8,
-                    408,
-                    710
+                    314,
+                    232,
+                    661,
+                    475
                 ],
-                "expected": [
-                    ".*stage.*"
+                "template": [
+                    "LargeEvent/StarAnis/StarAnisStory2StageNormal.png"
                 ],
                 "order_by": "Vertical",
                 "index": -1
@@ -161,22 +160,24 @@
         },
         "next": [
             "[JumpBack]BattleStart",
+            "[JumpBack]LargeEventEventStageQuickBattle",
             "LargeEventGoBack"
         ]
     },
     "LargeEventEventStageQuickBattle": {
         "desc": "大活动活动关卡页面快速战斗",
+        "max_hit": 1,
         "recognition": {
-            "type": "OCR",
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    438,
-                    8,
-                    408,
-                    710
+                    314,
+                    232,
+                    661,
+                    475
                 ],
-                "expected": [
-                    ".*11.*"
+                "template": [
+                    "Common/RedDot.png"
                 ],
                 "order_by": "Vertical",
                 "index": -1

@@ -34,6 +34,7 @@
                 ]
             }
         },
+        "post_wait_freezes": 500,
         "next": [
             "DailyRewardsEmailFlow",
             "EmailStart"
@@ -58,8 +59,15 @@
     },
     "DailyRewardsEmailFlow": {
         "desc": "邮箱流程",
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "DailyRewardsEmailVisible"
+                ]
+            }
+        },
         "next": [
-            "DailyRewardsEmailVisible",
             "[JumpBack]DailyRewardsHandleEmailRedDot",
             "[JumpBack]CommonConfirmReward",
             "CommonClosePage"

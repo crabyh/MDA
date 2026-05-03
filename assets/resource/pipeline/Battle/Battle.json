@@ -107,6 +107,7 @@
         "next": [
             "[JumpBack]BattleClickAutoBurst",
             "[JumpBack]BattleClickAutoShoot",
+            "[JumpBack]DialoguesSkipStory",
             "[JumpBack]NextState",
             "BattleSettlement"
         ]

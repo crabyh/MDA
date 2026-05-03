@@ -26,6 +26,7 @@
         "action": {
             "type": "Click"
         },
+        "post_wait_freezes": 500,
         "next": [
             "[JumpBack]CommonConfirmAction",
             "[JumpBack]CommonConfirmReward",
@@ -135,8 +136,15 @@
     },
     "ArenaFreeBattleFlow": {
         "desc": "免费战斗流程",
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "ArenaFreeBattleVisible"
+                ]
+            }
+        },
         "next": [
-            "ArenaFreeBattleVisible",
             "[JumpBack]RookieArenaClickQuickBattleToggle",
             "BattleStart"
         ]

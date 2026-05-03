@@ -32,7 +32,7 @@
             }
         }
     },
-    "AdviseCollectionCompleted": {
+    "AdviseCollectionCompletedVisible": {
         "desc": "已收集完咨询日志",
         "recognition": {
             "type": "TemplateMatch",
@@ -52,8 +52,15 @@
     },
     "AdviseCollectionCompletedFlow": {
         "desc": "咨询日志收集完成流程",
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "AdviseCollectionCompletedVisible"
+                ]
+            }
+        },
         "next": [
-            "AdviseCollectionCompleted",
             "QuickAdvise"
         ]
     },
@@ -159,7 +166,7 @@
         "action": {
             "type": "Click"
         },
-        "post_wait_freezes": 500,
+        "post_wait_freezes": 200,
         "next": [
             "AdviseStart"
         ]

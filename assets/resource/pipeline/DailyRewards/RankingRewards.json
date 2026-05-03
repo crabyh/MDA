@@ -44,8 +44,15 @@
     },
     "DailyRewardsRankingRewardFlow": {
         "desc": "排名奖励流程",
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "DailyRewardsRankingRewardVisible"
+                ]
+            }
+        },
         "next": [
-            "DailyRewardsRankingRewardVisible",
             "DailyRewardsClickRankingRewardRedDot",
             "NavigationEnterHall"
         ]

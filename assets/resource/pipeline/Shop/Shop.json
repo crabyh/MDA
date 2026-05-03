@@ -80,7 +80,7 @@
             }
         },
         "next": [
-            "ShopPurchaseBlockedByGemFlow",
+            "ShopPurchaseGemBlocked",
             "[JumpBack]CommonClickMax",
             "[JumpBack]CommonConfirmAction",
             "CommonConfirmReward"

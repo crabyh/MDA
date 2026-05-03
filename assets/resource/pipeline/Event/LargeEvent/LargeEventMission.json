@@ -50,8 +50,15 @@
     },
     "LargeEventMissionFlow": {
         "desc": "大活动任务流程",
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "LargeEventMissionVisible"
+                ]
+            }
+        },
         "next": [
-            "LargeEventMissionVisible",
             "LargeEventClickMissionRedDot"
         ]
     },
@@ -116,8 +123,15 @@
     },
     "LargeEventMissionClaimedFlow": {
         "desc": "大活动任务奖励已领取流程",
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "LargeEventMissionClaimed"
+                ]
+            }
+        },
         "next": [
-            "LargeEventMissionClaimed",
             "CommonGoBack"
         ]
     },

@@ -25,9 +25,11 @@
             }
         },
         "next": [
+            "[JumpBack]DailyRewardsClickPassRewardRedDot",
             "[JumpBack]DailyRewardsClickPassRedDot",
-            "[JumpBack]DailyRewardsClickPass",
-            "PassReward"
+            "[JumpBack]DailyRewardsEnterPass",
+            "PassStart",
+            "BaseEndTask"
         ]
     },
     "DailyRewardsClickPassRedDot": {
@@ -59,8 +61,8 @@
         },
         "post_wait_freezes": 500
     },
-    "DailyRewardsClickPass": {
-        "desc": "点击Pass",
+    "DailyRewardsEnterPass": {
+        "desc": "进入Pass内部",
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -85,26 +87,19 @@
                     0
                 ]
             }
-        }
-    },
-    "PassReward": {
-        "desc": "Pass奖励",
-        "post_wait_freezes": 500,
-        "next": [
-            "[JumpBack]DailyRewardsClickPassRewardRedDot",
-            "BaseEndTask"
-        ]
+        },
+        "post_wait_freezes": 1500
     },
     "DailyRewardsClickPassRewardRedDot": {
-        "desc": "点击Pass奖励红点",
+        "desc": "点击Pass内部奖励红点",
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    622,
-                    215,
-                    203,
-                    19
+                    455,
+                    202,
+                    369,
+                    36
                 ],
                 "template": [
                     "Common/RedDot.png"
@@ -122,10 +117,17 @@
                 ]
             }
         },
+        "post_wait_freezes": 500,
         "next": [
-            "DailyRewardsPassClaimedFlow",
+            "DailyRewardsClaimRewardFolw"
+        ]
+    },
+    "DailyRewardsClaimRewardFolw": {
+        "desc": "领取Pass奖励流程",
+        "next": [
             "[JumpBack]PassClaimAll",
-            "[JumpBack]CommonConfirmReward"
+            "[JumpBack]CommonConfirmReward",
+            "BaseEndTask"
         ]
     },
     "DailyRewardsPassClaimed": {
@@ -152,13 +154,6 @@
                 "count": 500
             }
         }
-    },
-    "DailyRewardsPassClaimedFlow": {
-        "desc": "Pass已领取流程",
-        "next": [
-            "DailyRewardsPassClaimed",
-            "CommonClosePage"
-        ]
     },
     "PassClaimAll": {
         "desc": "领取所有Pass奖励",

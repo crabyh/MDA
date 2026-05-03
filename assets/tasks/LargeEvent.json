@@ -41,16 +41,29 @@
                     "pipeline_override": {
                         "LargeEventEntry": {
                             "recognition": {
-                                "type": "TemplateMatch",
                                 "param": {
-                                    "roi": [
-                                        824,
-                                        571,
-                                        145,
-                                        68
-                                    ],
                                     "template": [
-                                        "LargeEvent/StarAnis.png"
+                                        "LargeEvent/StarAnis/StarAnisLogo.png"
+                                    ]
+                                }
+                            }
+                        },
+                        "LargeEventEventStageBattle": {
+                            "recognition": {
+                                "param": {
+                                    "template": [
+                                        "LargeEvent/StarAnis/StarAnisStory1Stage.png",
+                                        "LargeEvent/StarAnis/StarAnisStory2StageNormal.png"
+                                    ]
+                                }
+                            }
+                        },
+                        "LargeEventEventStageQuickBattle": {
+                            "recognition": {
+                                "param": {
+                                    "template": [
+                                        "LargeEvent/StarAnis/StarAnisStory1StageRepeatable.png",
+                                        "LargeEvent/StarAnis/StarAnisStory2StageNormalRepeatable.png"
                                     ]
                                 }
                             }
@@ -118,18 +131,7 @@
                     "pipeline_override": {
                         "LargeEventStory": {
                             "recognition": {
-                                "type": "OCR",
                                 "param": {
-                                    "roi": [
-                                        442,
-                                        536,
-                                        393,
-                                        79
-                                    ],
-                                    "expected": [
-                                        ".*STORY.*"
-                                    ],
-                                    "order_by": "Vertical",
                                     "index": -1
                                 }
                             }
