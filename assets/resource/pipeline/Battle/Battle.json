@@ -159,6 +159,22 @@
     "BattleNextState": {
         "desc": "下一关卡",
         "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "BattleNextStateVisible",
+                    "BattleNextStateAvailable"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 3000
+    },
+    "BattleNextStateVisible": {
+        "desc": "下一关卡可见",
+        "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
@@ -168,14 +184,35 @@
                     37
                 ],
                 "expected": [
-                    "下一关卡"
+                    ".*关卡.*"
                 ]
             }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 3000
+        }
+    },
+    "BattleNextStateAvailable": {
+        "desc": "下一关卡可点击",
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    1140,
+                    659,
+                    122,
+                    37
+                ],
+                "lower": [
+                    200,
+                    200,
+                    200
+                ],
+                "upper": [
+                    255,
+                    255,
+                    255
+                ],
+                "count": 100
+            }
+        }
     },
     "BattleSettlement": {
         "desc": "战斗结算",
