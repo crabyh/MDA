@@ -109,7 +109,8 @@
             "[JumpBack]BattleClickAutoShoot",
             "[JumpBack]DialoguesSkipStory",
             "[JumpBack]BattleNextState",
-            "BattleSettlement"
+            "BattleOperationComplete",
+            "BattleOperationFailed"
         ]
     },
     "BattleClickAutoBurst": {
@@ -214,14 +215,13 @@
             }
         }
     },
-    "BattleSettlement": {
-        "desc": "战斗结算",
+    "BattleOperationComplete": {
+        "desc": "战斗胜利结算",
         "recognition": {
             "type": "Or",
             "param": {
                 "any_of": [
-                    "BattleEscVisible",
-                    "BattleFailedVisible"
+                    "BattleEscVisible"
                 ]
             }
         },
@@ -229,8 +229,23 @@
             "type": "Click"
         },
         "next": [
-            "BattleSettlement",
+            "BattleOperationComplete",
             "CommonEndTask"
+        ]
+    },
+    "BattleOperationFailed": {
+        "desc": "战斗失败结算",
+        "recognition": {
+            "type": "Or",
+            "param": {
+                "any_of": [
+                    "BattleFailedVisible"
+                ]
+            }
+        },
+        "next": [
+            "CommonGoBack",
+            "BattleOperationFailed"
         ]
     },
     "BattleEscVisible": {
@@ -378,36 +393,5 @@
                 "count": 200
             }
         }
-    },
-    "BattleOperationFailedVisible": {
-        "desc": "任务失败可见",
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    1097,
-                    656,
-                    37,
-                    23
-                ],
-                "expected": [
-                    "编队"
-                ]
-            }
-        }
-    },
-    "BattleHandleOperationFailed": {
-        "desc": "处理任务失败",
-        "recognition": {
-            "type": "And",
-            "param": {
-                "all_of": [
-                    "BattleOperationFailedVisible"
-                ]
-            }
-        },
-        "next": [
-            "CommonGoBack"
-        ]
     }
 }
