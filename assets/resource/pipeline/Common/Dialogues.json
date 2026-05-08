@@ -25,10 +25,10 @@
             "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    880,
-                    662,
-                    78,
-                    54
+                    622,
+                    646,
+                    336,
+                    70
                 ],
                 "template": [
                     "Dialogues/Continue.png"
