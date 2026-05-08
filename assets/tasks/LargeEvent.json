@@ -37,24 +37,67 @@
                                 }
                             }
                         },
-                        "LargeEventEventStageBattle": {
+                        "LargeEventStory1StageClick": {
                             "recognition": {
                                 "param": {
                                     "template": [
-                                        "LargeEvent/StarAnis/StarAnisStory1Stage.png",
-                                        "LargeEvent/StarAnis/StarAnisStory2StageNormal.png",
-                                        "LargeEvent/StarAnis/StarAnisStory2StageHard.png"
+                                        "LargeEvent/StarAnis/StarAnisStory1Stage.png"
                                     ]
                                 }
                             }
                         },
-                        "LargeEventEventStageQuickBattle": {
+                        "LargeEventStory2StageNormalClick": {
                             "recognition": {
                                 "param": {
                                     "template": [
-                                        "LargeEvent/StarAnis/StarAnisStory1StageRepeatable.png",
-                                        "LargeEvent/StarAnis/StarAnisStory2StageNormalRepeatable.png",
-                                        "LargeEvent/StarAnis/StarAnisStory2StageHardRepeatable.png"
+                                        "LargeEvent/StarAnis/StarAnisStory2StageNormal.png"
+                                    ]
+                                }
+                            }
+                        },
+                        "LargeEventStory2StageHardClick": {
+                            "recognition": {
+                                "param": {
+                                    "template": [
+                                        "LargeEvent/StarAnis/StarAnisStory2StageHard.png",
+                                        "LargeEvent/StarAnis/StarAnisStory2StageHardSP.png"
+                                    ]
+                                }
+                            },
+                            "action": {
+                                "param": {
+                                    "target_offset": [
+                                        50,
+                                        -50,
+                                        0,
+                                        0
+                                    ]
+                                }
+                            }
+                        },
+                        "LargeEventStory1StageRepeatableClick": {
+                            "recognition": {
+                                "param": {
+                                    "template": [
+                                        "LargeEvent/StarAnis/StarAnisStory1StageRepeatable.png"
+                                    ]
+                                }
+                            }
+                        },
+                        "LargeEventStory2StageNormalRepeatableClick": {
+                            "recognition": {
+                                "param": {
+                                    "template": [
+                                        "LargeEvent/StarAnis/StarAnisStory1StageRepeatable.png"
+                                    ]
+                                }
+                            }
+                        },
+                        "LargeEventStory2StageHardRepeatableClick": {
+                            "recognition": {
+                                "param": {
+                                    "template": [
+                                        "LargeEvent/StarAnis/StarAnisStory1StageRepeatable.png"
                                     ]
                                 }
                             }

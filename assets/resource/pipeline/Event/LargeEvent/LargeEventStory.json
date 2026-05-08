@@ -128,11 +128,63 @@
             ]
         },
         "next": [
-            "LargeEventEventStageBattle"
+            "LargeEventEventStageBattleFlow"
         ]
     },
-    "LargeEventEventStageBattle": {
-        "desc": "大活动活动关卡页面战斗",
+    "LargeEventEventStageBattleFlow": {
+        "desc": "大活动活动关卡页面战斗流程",
+        "next": [
+            "LargeEventEventStageBattlePage",
+            "[JumpBack]LargeEventStory1StageClick",
+            "[JumpBack]LargeEventStory2StageNormalClick",
+            "[JumpBack]LargeEventStory2StageHardClick",
+            "LargeEventEventStageQuickBattleFlow"
+        ]
+    },
+    "LargeEventEventStageQuickBattleFlow": {
+        "desc": "大活动活动关卡页面快速战斗流程",
+        "next": [
+            "LargeEventEventStageBattlePage",
+            "[JumpBack]LargeEventStory1StageRepeatableClick",
+            "[JumpBack]LargeEventStory2StageNormalRepeatableClick",
+            "[JumpBack]LargeEventStory2StageHardRepeatableClick",
+            "LargeEventGoBack"
+        ]
+    },
+    "LargeEventEventStageBattlePage": {
+        "desc": "大活动活动关卡页面战斗页面",
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "BattleMainVisible"
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]BattleStart",
+            "LargeEventGoBack"
+        ]
+    },
+    "LargeEventStoryVisible": {
+        "desc": "大活动剧情活动页面标识",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    5,
+                    18,
+                    50,
+                    16
+                ],
+                "expected": [
+                    "剧情活动"
+                ]
+            }
+        }
+    },
+    "LargeEventStory1StageClick": {
+        "desc": "大活动故事1关卡点击",
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -151,39 +203,18 @@
         },
         "action": {
             "type": "Click"
-        },
-        "next": [
-            "LargeEventEventStageBattlePage",
-            "LargeEventEventStageQuickBattle"
-        ]
+        }
     },
-    "LargeEventEventStageBattlePage": {
-        "desc": "大活动活动关卡页面战斗页面",
-        "recognition": {
-            "type": "And",
-            "param": {
-                "all_of": [
-                    "BattleMainVisible"
-                ]
-            }
-        },
-        "next": [
-            "[JumpBack]BattleStart",
-            "[JumpBack]LargeEventEventStageQuickBattle",
-            "LargeEventGoBack"
-        ]
-    },
-    "LargeEventEventStageQuickBattle": {
-        "desc": "大活动活动关卡页面快速战斗",
-        "max_hit": 1,
+    "LargeEventStory2StageNormalClick": {
+        "desc": "大活动故事2普通关卡点击",
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "roi": [
                     314,
-                    232,
+                    103,
                     661,
-                    475
+                    604
                 ],
                 "template": [
                     "Common/RedDot.png" //占位，应该去task页面修改
@@ -194,26 +225,94 @@
         },
         "action": {
             "type": "Click"
-        },
-        "next": [
-            "LargeEventEventStageBattlePage"
-        ]
+        }
     },
-    "LargeEventStoryVisible": {
-        "desc": "大活动剧情活动页面标识",
+    "LargeEventStory2StageHardClick": {
+        "desc": "大活动故事2困难关卡点击",
         "recognition": {
-            "type": "OCR",
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    5,
-                    18,
-                    50,
-                    16
+                    314,
+                    103,
+                    661,
+                    604
                 ],
-                "expected": [
-                    "剧情活动"
-                ]
+                "template": [
+                    "Common/RedDot.png" //占位，应该去task页面修改
+                ],
+                "order_by": "Vertical",
+                "index": -1
             }
+        },
+        "action": {
+            "type": "Click"
+        }
+    },
+    "LargeEventStory1StageRepeatableClick": {
+        "desc": "大活动故事1关卡可扫荡点击",
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    314,
+                    103,
+                    661,
+                    604
+                ],
+                "template": [
+                    "Common/RedDot.png" //占位，应该去task页面修改
+                ],
+                "order_by": "Vertical",
+                "index": -1
+            }
+        },
+        "action": {
+            "type": "Click"
+        }
+    },
+    "LargeEventStory2StageNormalRepeatableClick": {
+        "desc": "大活动故事2普通关卡可扫荡点击",
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    314,
+                    103,
+                    661,
+                    604
+                ],
+                "template": [
+                    "Common/RedDot.png" //占位，应该去task页面修改
+                ],
+                "order_by": "Vertical",
+                "index": -1
+            }
+        },
+        "action": {
+            "type": "Click"
+        }
+    },
+    "LargeEventStory2StageHardRepeatableClick": {
+        "desc": "大活动故事2困难关卡可扫荡点击",
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    314,
+                    103,
+                    661,
+                    604
+                ],
+                "template": [
+                    "Common/RedDot.png" //占位，应该去task页面修改
+                ],
+                "order_by": "Vertical",
+                "index": -1
+            }
+        },
+        "action": {
+            "type": "Click"
         }
     }
 }
