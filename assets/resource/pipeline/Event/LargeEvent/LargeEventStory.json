@@ -137,9 +137,9 @@
             "param": {
                 "roi": [
                     314,
-                    232,
+                    103,
                     661,
-                    475
+                    604
                 ],
                 "template": [
                     "Common/RedDot.png" //占位，应该去task页面修改
