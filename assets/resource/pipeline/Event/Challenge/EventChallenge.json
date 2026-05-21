@@ -33,7 +33,7 @@
                     424
                 ],
                 "expected": [
-                    ".*CHALLENGE.*"
+                    "(?i).*CHALLENGE.*"
                 ],
                 "order_by": "Vertical",
                 "index": -1
