@@ -106,6 +106,7 @@
         "next": [
             "[JumpBack]BattleStart",
             "SmallEventEventStagePageFlow",
+            "[JumpBack]DialoguesSkipStory",
             "SmallEventGoBack"
         ]
     },
