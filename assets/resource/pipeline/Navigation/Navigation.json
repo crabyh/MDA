@@ -29,7 +29,9 @@
                     39,
                     32
                 ],
-                "template": ["Common/HomeButton.png"]
+                "template": [
+                    "Common/HomeButton.png"
+                ]
             }
         },
         "action": {
@@ -47,7 +49,9 @@
                     50,
                     16
                 ],
-                "expected": ["SKIP"]
+                "expected": [
+                    "SKIP"
+                ]
             }
         },
         "action": {
@@ -65,20 +69,26 @@
                     66,
                     17
                 ],
-                "expected": ["点击关闭画面"]
+                "expected": [
+                    "点击关闭画面"
+                ]
             }
         },
         "action": {
             "type": "Click"
         },
-        "next": ["CommonConfirmAction"]
+        "next": [
+            "CommonConfirmAction"
+        ]
     },
     "NavigationFreeStateVisible": {
         "desc": "自由状态可见",
         "recognition": {
             "type": "And",
             "param": {
-                "all_of": ["CommonBellVisible"]
+                "all_of": [
+                    "CommonBellVisible"
+                ]
             }
         }
     },
@@ -87,7 +97,9 @@
         "recognition": {
             "type": "And",
             "param": {
-                "all_of": ["NavigationFreeStateVisible"]
+                "all_of": [
+                    "NavigationFreeStateVisible"
+                ]
             }
         },
         "pre_wait_freezes": 500,
@@ -110,7 +122,9 @@
                     60,
                     33
                 ],
-                "expected": ["关闭"]
+                "expected": [
+                    "关闭"
+                ]
             }
         },
         "pre_wait_freezes": 500,
@@ -141,10 +155,14 @@
         "recognition": {
             "type": "And",
             "param": {
-                "all_of": ["NavigationNoticeVisible"]
+                "all_of": [
+                    "NavigationNoticeVisible"
+                ]
             }
         },
-        "next": ["CommonClosePage"]
+        "next": [
+            "CommonClosePage"
+        ]
     },
     "NavigationClickHall": {
         "desc": "点击大厅",
@@ -157,7 +175,9 @@
                     30,
                     18
                 ],
-                "expected": ["大厅"]
+                "expected": [
+                    "大厅"
+                ]
             }
         },
         "action": {
@@ -183,7 +203,9 @@
                     70,
                     25
                 ],
-                "expected": ["方舟"]
+                "expected": [
+                    "方舟"
+                ]
             }
         }
     },
@@ -192,7 +214,9 @@
         "recognition": {
             "type": "And",
             "param": {
-                "all_of": ["NavigationArkVisible"]
+                "all_of": [
+                    "NavigationArkVisible"
+                ]
             }
         },
         "action": {
@@ -214,7 +238,9 @@
                     54,
                     36
                 ],
-                "expected": ["方舟"]
+                "expected": [
+                    "方舟"
+                ]
             }
         }
     },
@@ -229,7 +255,9 @@
                     28,
                     25
                 ],
-                "template": ["Common/RedDot.png"]
+                "template": [
+                    "Common/RedDot.png"
+                ]
             }
         }
     },
@@ -244,7 +272,9 @@
                     37,
                     35
                 ],
-                "template": ["Common/Bell.png"]
+                "template": [
+                    "Common/Bell.png"
+                ]
             }
         }
     },

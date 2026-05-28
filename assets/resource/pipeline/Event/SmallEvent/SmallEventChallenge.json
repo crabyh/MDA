@@ -12,11 +12,15 @@
                     308,
                     79
                 ],
-                "expected": [".*挑战.*"],
-                "replace": [[
+                "expected": [
+                    ".*挑战.*"
+                ],
+                "replace": [
+                    [
                         "排",
                         "挑"
-                    ]]
+                    ]
+                ]
             }
         },
         "action": {
@@ -31,6 +35,8 @@
     },
     "SmallEventChallengeStart": {
         "max_hit": 1,
-        "next": ["EventChallenge"]
+        "next": [
+            "EventChallenge"
+        ]
     }
 }
