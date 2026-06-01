@@ -11,6 +11,8 @@
     "controller.ADB.description": "Supports Android emulators and physical Android devices.",
     "group.daily.label": "Daily Tasks",
     "group.daily.description": "Tasks that can be executed daily",
+    "group.periodic.label": "Periodic Tasks",
+    "group.periodic.description": "Tasks that open or refresh on a recurring schedule",
     "group.realtime.label": "Real-time Tasks",
     "group.realtime.description": "Tasks that require real-time execution",
     "group.utility.label": "Utilities",

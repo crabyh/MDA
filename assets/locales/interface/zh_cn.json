@@ -11,6 +11,8 @@
     "controller.ADB.description": "支持安卓模拟器和实体安卓设备",
     "group.daily.label": "日常任务",
     "group.daily.description": "每日可执行的任务",
+    "group.periodic.label": "周期任务",
+    "group.periodic.description": "按周期开放或刷新的任务",
     "group.realtime.label": "实时任务",
     "group.realtime.description": "需要实时执行的任务",
     "group.utility.label": "实用工具",
