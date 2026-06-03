@@ -1,7 +1,6 @@
 package membership
 
 import (
-	"strings"
 	"sync"
 	"time"
 
@@ -45,33 +44,6 @@ func (t *RuntimeTracker) OnTaskerTask(tasker *maa.Tasker, event maa.EventStatus,
 	}
 }
 
-func (t *RuntimeTracker) applyExtraMultiplier(taskID int64, extraPermille int64, reason string) {
-	if extraPermille <= 0 {
-		extraPermille = multiplierScale
-	}
-
-	t.mu.Lock()
-	defer t.mu.Unlock()
-	if !t.active || t.taskID != uint64(taskID) {
-		return
-	}
-	if reason != "" && strings.Contains(t.multiplier.Reason, reason) {
-		return
-	}
-	if t.multiplier.ExtraPermille <= 0 {
-		t.multiplier.ExtraPermille = multiplierScale
-	}
-	t.multiplier.ExtraPermille = t.multiplier.ExtraPermille * extraPermille / multiplierScale
-	if reason == "" {
-		return
-	}
-	if t.multiplier.Reason == "" || t.multiplier.Reason == "default" {
-		t.multiplier.Reason = reason
-		return
-	}
-	t.multiplier.Reason += "," + reason
-}
-
 func (t *RuntimeTracker) consumeBillableSeconds(delta time.Duration, flush bool) int64 {
 	if delta < 0 {
 		delta = 0
@@ -94,10 +66,6 @@ func (t *RuntimeTracker) consumeBillableSeconds(delta time.Duration, flush bool)
 }
 
 func (t *RuntimeTracker) OnNodePipelineNode(ctx *maa.Context, event maa.EventStatus, detail maa.NodePipelineNodeDetail) {
-	if event != maa.EventStatusStarting || detail.Name != "DailyRewardsDailyLogin" {
-		return
-	}
-	t.applyExtraMultiplier(int64(detail.TaskID), 1500, "daily_login_enabled")
 }
 
 func (t *RuntimeTracker) OnNodeRecognitionNode(ctx *maa.Context, event maa.EventStatus, detail maa.NodeRecognitionNodeDetail) {
