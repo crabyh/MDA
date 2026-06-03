@@ -48,7 +48,8 @@
             "type": "Click"
         },
         "next": [
-            "SoloRaidFlow"
+            "SoloRaidFlow",
+            "SoloRaidClickEntry" //兜底
         ]
     },
     "SoloRaidFlow": {
