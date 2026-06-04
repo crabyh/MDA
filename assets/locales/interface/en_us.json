@@ -119,6 +119,7 @@
     "option.RedDotClearSubMenu.label": "Clear Submenu Red Dots",
     "option.RedDotClearProfilePage.label": "Clear Profile Page Red Dots",
     "option.RedDotClearArchives.label": "Clear Archives Red Dots",
+    "option.RedDotClearCostumeGacha.label": "Clear Costume Gacha Red Dots",
     "task.LargeEvent.label": "🎪Large Event",
     "task.LargeEvent.description": "Enter the large event interface and complete related tasks. (Events with SD characters are called Large Events)",
     "option.LargeEventTheme.label": "Event Theme",
