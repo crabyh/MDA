@@ -234,7 +234,8 @@
             "[JumpBack]CommonConfirmReward",
             "[JumpBack]CommonReturnOutpost",
             "CommonClickFreeState",
-            "[JumpBack]CommonClickHall"
+            "[JumpBack]CommonClickHall",
+            "[JumpBack]CommonClickBlank"
         ]
     },
     "CommonReturnOutpost": {
