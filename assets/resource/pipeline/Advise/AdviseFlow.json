@@ -295,7 +295,15 @@
         "action": {
             "type": "Click"
         },
-        "post_wait_freezes": 200
+        "post_wait_freezes": {
+            "time": 200,
+            "target": [
+                742,
+                351,
+                80,
+                142
+            ]
+        }
     },
     "AdviseBondIncreasedVisible": {
         "desc": "好感度提升的标识",
