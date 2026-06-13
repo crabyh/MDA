@@ -102,11 +102,9 @@
                     "name": "SmallEvent",
                     "option": {
                         "SmallEventTheme": "BitterSpice",
-                        "SmallEventContent": [
-                            "SmallEventChallenge",
-                            "SmallEventStory",
-                            "SmallEventMission"
-                        ]
+                        "SmallEventChallenge": "Yes",
+                        "SmallEventStory": "Yes",
+                        "SmallEventMission": "Yes"
                     }
                 },
                 {
@@ -114,12 +112,10 @@
                     "option": {
                         "LargeEventTheme": "StarAnis",
                         "LargeEventStoryPriority": "Story2First",
-                        "LargeEventContent": [
-                            "LargeEventLoginStamp",
-                            "LargeEventChallenge",
-                            "LargeEventStory",
-                            "LargeEventMission"
-                        ]
+                        "LargeEventLoginStamp": "Yes",
+                        "LargeEventChallenge": "Yes",
+                        "LargeEventStory": "Yes",
+                        "LargeEventMission": "Yes"
                     }
                 },
                 {

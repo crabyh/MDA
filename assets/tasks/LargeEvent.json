@@ -8,7 +8,10 @@
             "option": [
                 "LargeEventTheme",
                 "LargeEventStoryPriority",
-                "LargeEventContent"
+                "LargeEventLoginStamp",
+                "LargeEventChallenge",
+                "LargeEventStory",
+                "LargeEventMission"
             ],
             "group": [
                 "periodic"
@@ -160,19 +163,13 @@
                 }
             ]
         },
-        "LargeEventContent": {
-            "type": "checkbox",
-            "default_case": [
-                "LargeEventLoginStamp",
-                "LargeEventChallenge",
-                "LargeEventStory",
-                "LargeEventMission"
-            ],
-            "label": "$option.LargeEventContent.label",
+        "LargeEventLoginStamp": {
+            "type": "switch",
+            "default_case": "Yes",
+            "label": "$option.LargeEventContent.LargeEventLoginStamp",
             "cases": [
                 {
-                    "name": "LargeEventLoginStamp",
-                    "label": "$option.LargeEventContent.LargeEventLoginStamp",
+                    "name": "Yes",
                     "pipeline_override": {
                         "LargeEventEnterLoginStamp": {
                             "enabled": true
@@ -180,8 +177,22 @@
                     }
                 },
                 {
-                    "name": "LargeEventChallenge",
-                    "label": "$option.LargeEventContent.LargeEventChallenge",
+                    "name": "No",
+                    "pipeline_override": {
+                        "LargeEventEnterLoginStamp": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "LargeEventChallenge": {
+            "type": "switch",
+            "default_case": "Yes",
+            "label": "$option.LargeEventContent.LargeEventChallenge",
+            "cases": [
+                {
+                    "name": "Yes",
                     "pipeline_override": {
                         "LargeEventEnterChallenge": {
                             "enabled": true
@@ -189,8 +200,22 @@
                     }
                 },
                 {
-                    "name": "LargeEventStory",
-                    "label": "$option.LargeEventContent.LargeEventStory",
+                    "name": "No",
+                    "pipeline_override": {
+                        "LargeEventEnterChallenge": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "LargeEventStory": {
+            "type": "switch",
+            "default_case": "Yes",
+            "label": "$option.LargeEventContent.LargeEventStory",
+            "cases": [
+                {
+                    "name": "Yes",
                     "pipeline_override": {
                         "LargeEventEnterStory": {
                             "enabled": true
@@ -198,11 +223,33 @@
                     }
                 },
                 {
-                    "name": "LargeEventMission",
-                    "label": "$option.LargeEventContent.LargeEventMission",
+                    "name": "No",
+                    "pipeline_override": {
+                        "LargeEventEnterStory": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "LargeEventMission": {
+            "type": "switch",
+            "default_case": "Yes",
+            "label": "$option.LargeEventContent.LargeEventMission",
+            "cases": [
+                {
+                    "name": "Yes",
                     "pipeline_override": {
                         "LargeEventEnterMission": {
                             "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "LargeEventEnterMission": {
+                            "enabled": false
                         }
                     }
                 }
