@@ -49,11 +49,29 @@
                                 }
                             }
                         },
+                        "LargeEventClickStory2StageNormal": {
+                            "recognition": {
+                                "param": {
+                                    "template": [
+                                        "LargeEvent/ArkRanger/ArkRangerStory2StageNormal.png"
+                                    ]
+                                }
+                            }
+                        },
                         "LargeEventClickStory1StageRepeatable": {
                             "recognition": {
                                 "param": {
                                     "template": [
                                         "LargeEvent/ArkRanger/ArkRangerStory1StageRepeatable.png"
+                                    ]
+                                }
+                            }
+                        },
+                        "LargeEventClickStory2StageNormalRepeatable": {
+                            "recognition": {
+                                "param": {
+                                    "template": [
+                                        "LargeEvent/ArkRanger/ArkRangerStory2StageNormalRepeatable.png"
                                     ]
                                 }
                             }
