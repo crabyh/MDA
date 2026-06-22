@@ -137,17 +137,34 @@ const (
 	maxFetchAttempts = 3
 )
 
-// GetMembershipStatus returns the current membership status, using cache if available.
+// GetMembershipStatus returns the current membership status.
+//
+// Remote membership verification is disabled: instead of calling out to the
+// device-status endpoint (and fingerprinting the machine via WMI), every client
+// is treated as a top-tier member with unlimited runtime and all features
+// unlocked. This removes the only outbound runtime network call as well as the
+// VerificationUnavailable / UpdateRequired gating that could otherwise stop
+// tasks. The remote code path (checkMembership/fetchMemberStatus) is left intact
+// but unused.
 func GetMembershipStatus() *MembershipStatus {
-	cachedStatusMu.RLock()
-	if cachedStatus != nil && time.Since(cachedStatusTime) < cacheExpiry {
-		status := cachedStatus
-		cachedStatusMu.RUnlock()
-		return status
+	return &MembershipStatus{
+		Tier:                        "Orange Pro",
+		TierCode:                    "orange_pro",
+		TierName:                    "Orange Pro",
+		PlanCode:                    "orange_pro",
+		PlanName:                    "Orange Pro",
+		StartsOn:                    "20000101",
+		ExpiresOn:                   "99991231",
+		PaidThroughOn:               "99991231",
+		HasFutureRenewal:            true,
+		RemainingDays:               9999,
+		DailyRuntimeMinutes:         60 * 24,
+		RegularDailyRuntimeMinutes:  60 * 24,
+		SpecialPeriodRuntimeMinutes: 1500,
+		AllFeaturesUnlocked:         true,
+		UnlimitedRuntime:            true,
+		IsMember:                    true,
 	}
-	cachedStatusMu.RUnlock()
-
-	return checkMembership()
 }
 
 // checkMembership performs the full membership check flow.
