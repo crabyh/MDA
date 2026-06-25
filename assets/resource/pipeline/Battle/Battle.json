@@ -339,8 +339,7 @@
         "timeout": 180000,
         "next": [
             "[JumpBack]BattleSkipBossCutscene",
-            "[JumpBack]BattleClickAutoBurst",
-            "[JumpBack]BattleClickAutoShoot",
+            "[JumpBack]BattleClickAuto",
             "[JumpBack]DialoguesSkipStory",
             "[JumpBack]BattleClickNextStage",
             "[JumpBack]CommonConfirmAction",
@@ -374,8 +373,8 @@
             "CommonEndTask"
         ]
     },
-    "BattleClickAutoBurst": {
-        "desc": "点击自动爆裂",
+    "BattleClickAuto": {
+        "desc": "点击自动爆裂或自动射击",
         "max_hit": 1,
         "recognition": {
             "type": "TemplateMatch",
@@ -387,28 +386,7 @@
                     40
                 ],
                 "template": [
-                    "Battle/AutoBurst.png"
-                ],
-                "threshold": 0.9
-            }
-        },
-        "action": {
-            "type": "Click"
-        }
-    },
-    "BattleClickAutoShoot": {
-        "desc": "点击自动射击",
-        "max_hit": 1,
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    0,
-                    0,
-                    100,
-                    40
-                ],
-                "template": [
+                    "Battle/AutoBurst.png",
                     "Battle/AutoShoot.png"
                 ],
                 "threshold": 0.9
